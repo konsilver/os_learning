@@ -20,6 +20,14 @@ struct sbiret sbi_debug_console_write_byte(uint8_t byte);
 #define SBI_SRST_RESET_TYPE_WARM_REBOOT 2
 #define SBI_SRST_RESET_REASON_NONE 0
 #define SBI_SRST_RESET_REASON_SYSTEM_FAILURE 1
+
+#define SBI_EID_DEBUG_CONSOLE 0x4442434E  
+#define SBI_FID_CONSOLE_WRITE_BYTE 2      
+#define SBI_EID_SYSTEM_RESET 0x53525354
+#define SBI_FID_SYSTEM_RESET 0
+
+#define SBI_SUCCESS 0
+
 struct sbiret sbi_system_reset(uint32_t reset_type, uint32_t reset_reason);
 
 #endif
